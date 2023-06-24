@@ -3,23 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Counting text</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: greenyellow;
+        }
+
+        h1 {
+            text-align: center;
+            color: brown;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 80px;
+            align-items: center;
+        }
+
         textarea {
             width: 90%;
-            height: 50px;
+            font-size: large;
+            height: 150px;
+        }
+
+        #area {
+            background-color: rebeccapurple;
+            color: white;
+        }
+
+        .style-text {
+            font-size: 25px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <textarea name="" id=""></textarea>
+    <h1>Counting text machine</h1>
+    <div class="container">
+        <textarea name="" id="area"></textarea>
 
-    <div>
-        <div>Ilość znaków: <span id="num-characters"></span></div>
-        <div>Ilość słów: <span id="num-words"></span></div>
-        <div>Ilość zdań: <span id="num-sentences"></span></div>
+        <div>
+            <div class="style-text">Ilość znaków: <span id="num-characters"></span></div>
+            <div class="style-text">Ilość słów: <span id="num-words"></span></div>
+            <div class="style-text">Ilość zdań: <span id="num-sentences"></span></div>
+        </div>
     </div>
-
     <script>
         let textArea = document.getElementsByTagName("textarea")[0]
 
